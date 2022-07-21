@@ -37,20 +37,21 @@ app.post("/sign_up",(req,res)=>{
     });
     return res.redirect('signup_success.html')
 })
-    app.get("/",(req,res)=>{
+
+app.get("/",(req,res)=>{
    // res.send("Hello From Server")
-//    res.set({
-//     "Allow-access-allow-origin":'*'
-//    })
-   //return res.redirect('index.html');
-   return res.status(200).json({
-    status:true,
-    msg:"successfull"
-   });
+   res.set({
+    "Allow-access-allow-origin":'*'
+   })
+   return res.redirect('index.html');
+//    return res.status(200).json({
+//     status:true,
+//     msg:"successfull"
+//    });
 })
 
 app.get('/ping', (res,req)=>{
-    return res.status(200).json({
+    return res.json({
         status:true,
         msg:"This is ping and working fine!"
     })
