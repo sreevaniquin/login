@@ -38,9 +38,13 @@ app.post("/sign_up",(req,res)=>{
 })
     app.get("/",(req,res)=>{
    // res.send("Hello From Server")
-   res.set({
-    "Allow-access-allow-origin":'*'
+//    res.set({
+//     "Allow-access-allow-origin":'*'
+//    })
+   //return res.redirect('index.html');
+   return res.status(200).json({
+    status:true,
+    msg:"successfull"
    })
-   return res.redirect('index.html');
 }).listen(3000);
 console.log("listening on port 3000");
