@@ -45,6 +45,6 @@ app.post("/sign_up",(req,res)=>{
    return res.status(200).json({
     status:true,
     msg:"successfull"
-   })
+   });
 }).listen(3000);
 console.log("listening on port 3000");
