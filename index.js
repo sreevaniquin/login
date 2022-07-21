@@ -49,6 +49,13 @@ app.post("/sign_up",(req,res)=>{
    });
 })
 
+app.get('/ping', (res,req)=>{
+    return res.status(200).json({
+        status:true,
+        msg:"This is ping and working fine!"
+    })
+})
+
 
 app.listen(port, ()=>{
 console.log(`Listening at http://localhost:${port}`);
